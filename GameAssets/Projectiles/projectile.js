@@ -1,5 +1,7 @@
 
 
+/* fireProjectile chooses the type of projectile to be fired based on the tower calling it, and passings in targeting parameters */
+
 function fireProjectile(projectileType, originX, originY, originBodySize, target, targetID, targetingArray){
 
   if(projectileType == 1){
@@ -25,14 +27,19 @@ function fireProjectile(projectileType, originX, originY, originBodySize, target
 }
 
 
+/* damage decrements health from healthStatus */
+
 function damage(targetID, damage){
   healthStatus[targetID] += -damage;
 }
 
+/* accuracyRoll determines where a shot lands */
 
 function accuracyRoll(coordinate, accuracy){
   return coordinate += Math.floor(Math.random() * accuracy) - accuracy/2;
 }
+
+/* checkSplash determines if a shot hits multiple targets */
 
 function checkSplash(originX, originY, targetX, targetY, targetSize, targetingArray, impact){
   for(var i = 0; i < targetingArray.length; i++){
@@ -44,6 +51,8 @@ function checkSplash(originX, originY, targetX, targetY, targetSize, targetingAr
   }
 }
 
+/* checkSplash determines if a shot hits a single target */
+
 function checkHit(originX, originY, targetX, targetY, targetSize){
   if(originX > targetX - targetSize && originX < targetX + targetSize &&
      originY > targetY - targetSize && originY < targetY + targetSize){
@@ -51,6 +60,9 @@ function checkHit(originX, originY, targetX, targetY, targetSize){
    }
   return false;
 }
+
+
+/* These are the projectile types. Shots are drawn via canvas, and hits checked using the above helper functions. */
 
 
 function laser(originX, originY, originBodySize, target, targetID, targetingArray){

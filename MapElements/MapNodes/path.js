@@ -4,6 +4,8 @@
 var pathCoords = [];
 var pathPadding = 5;
 
+/* buildingRestriction  prevents the building of turrets on the path or on top of each other */
+
 function buildingRestriction(x, y, limit){
 
   for(var i = 0; i < mapNodes.length - 1; i++){

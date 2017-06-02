@@ -51,15 +51,8 @@ var Game = function(){
 
     drawGrid();
     drawPath();
-
-    /* REITERATING THE DO NOT SCREW WITH THING */
-
-    /* frame is incremented here. Used for timing purposes */
-
-
-
-
     populateNodes();
+
     checkEscaped();
     nextWave();
     gameStart2.play();

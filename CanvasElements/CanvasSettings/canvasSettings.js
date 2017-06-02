@@ -39,6 +39,12 @@ interfaceBoard.style.width = window.innerWidth;
 interfaceBoard.style.height = window.innerHeight;
 
 
+
+/* Function below is NOT MY CODE */
+
+/* This function draws a star in canvas. It was taken from stackOverflow */
+
+
 function drawStar(cx,cy,spikes,outerRadius,innerRadius){
       var rot=Math.PI/2*3;
       var x=cx;

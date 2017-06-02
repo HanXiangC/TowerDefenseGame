@@ -33,11 +33,12 @@ var currentGolems = 0;
 var ogreLimit = 2;
 var golemLimit = 1;
 
-var waveDelay = 600;
 
+/* This function creates our creep objects and populates them in creeps array */
 
 function increaseDifficulty(){
-  /* This loop creates our creep objects and populates them in creeps array */
+
+
   if(frame % spawnFrame == 0 && currentSpawn < initialSpawn){
 
     /* creeps is contained in creepSettings.js */
@@ -60,8 +61,6 @@ function increaseDifficulty(){
         currentSpawn += 1;
       }
     }
-
-
 
   }
 
@@ -130,6 +129,8 @@ function checkDeadNumbers(){
   return killCounter;
 }
 
+/* checkEscaped updates lives with the number of creeps which have escaped */
+
 function checkEscaped(){
 
   var counter = 10;
@@ -148,6 +149,8 @@ function checkEscaped(){
   }
   lives = counter - creepsEscaped;
 }
+
+/* creepsOnBoard checks the number of creeps currently on the game space */
 
 function creepsOnBoard(){
   var counter = 0;

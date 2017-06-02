@@ -26,7 +26,7 @@ var healthStatus = [];
 
 var escaped = [];
 
-/* These are the settings for the standard creep */
+/* These are the settings for the various creeps */
 
 var basicCreepSettings = {
   x: -20,

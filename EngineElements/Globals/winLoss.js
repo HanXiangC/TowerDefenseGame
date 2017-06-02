@@ -1,3 +1,7 @@
+
+
+/* Check loss ends the game if lives reach 0 */
+
 function checkLoss(){
   if(lives <= 0){
 
