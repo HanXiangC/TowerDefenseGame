@@ -176,7 +176,7 @@ function machinegunBullet(originX, originY, originBodySize, target, targetID, ta
 
     machineGunFire.play();
     machineGunFire2.play();
-    machineGunFire3.play();
+    //machineGunFire3.play();
 }
 
 function cannonShell(originX, originY, originBodySize, target, targetID, targetingArray){
